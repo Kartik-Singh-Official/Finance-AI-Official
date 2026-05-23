@@ -27,10 +27,10 @@
 graph TD
   Client[Client Browser: Tailwind + React] -->|HTTPS Requests + Bearer Token| Middleware[Next.js Auth Middleware]
   Middleware -->|Authentication Verification| Supabase[Supabase PostgreSQL DB]
-  Client -->|Stream API Post| ChatRoute[/api/ai/chat]
+  Client -->|Stream API Post| ChatRoute["/api/ai/chat"]
   ChatRoute -->|IP Rate Limit Check| Redis[Upstash Redis Rest pipeline]
   ChatRoute -->|CSRF Check & Profile Sanitization| Gemini[Google Gemini AI Engine]
-  Client -->|Account Deletion Request| DeleteRoute[/api/account/delete]
+  Client -->|Account Deletion Request| DeleteRoute["/api/account/delete"]
   DeleteRoute -->|Password Re-authentication| SupabaseAuth[Supabase Auth Client]
   DeleteRoute -->|Cascade Wipe Trigger| Supabase
 ```
