@@ -5,8 +5,11 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Auth%20%26%20DB-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Upstash Redis](https://img.shields.io/badge/Upstash_Redis-Rate_Limiter-FF4433?style=for-the-badge&logo=redis&logoColor=white)](https://upstash.com/)
+[![Live Demo](https://img.shields.io/badge/Demo-Live_System-emerald?style=for-the-badge&logo=netlify&logoColor=white)](https://financeaiofficial.netlify.app/)
 
 **FinanceAI India** is a premium personal finance tracking and AI advisory application designed specifically for Indian savers. Built with a modern tech stack (Next.js 14, Supabase, Tailwind, Gemini AI), it helps users optimize their monthly budget, visualize active commitments, plan taxes (Old vs. New regime), and interact with an elite AI advisor powered by Google's Gemini SDK.
+
+🔗 **Live Demo Link:** [financeaiofficial.netlify.app](https://financeaiofficial.netlify.app/)
 
 ---
 
