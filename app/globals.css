@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-[#1E293B] font-sans antialiased;
+  }
+
+  /* Hide underlying elements during global splash preloader to maintain real loading illusion */
+  body.preloader-active main,
+  body.preloader-active header,
+  body.preloader-active aside {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Custom elegant scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+@layer components {
+  /* Frosted sleek container with responsive card interactive glows */
+  .card-container {
+    @apply bg-white border border-[#E2E8F0] rounded-2xl p-6 transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-accent/30 hover:shadow-[0_12px_24px_-10px_rgba(99,102,241,0.08)];
+  }
+  
+  /* Primary CTA with premium drop-shadow scale pops */
+  .primary-btn {
+    @apply bg-accent hover:bg-accent-hover text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-lg shadow-accent/15 hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97];
+  }
+  
+  /* Modern secondary/outline button */
+  .secondary-btn {
+    @apply bg-[#F1F5F9] hover:bg-[#E2E8F0] text-[#475569] px-5 py-2.5 rounded-xl font-bold transition-all hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97];
+  }
+  
+  /* Premium input glow borders */
+  .input-field {
+    @apply bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/5 transition-all w-full;
+  }
+  
+  /* Micro labels tracking specs */
+  .label-text {
+    @apply text-[11px] font-bold uppercase tracking-widest text-[#64748B] block mb-1.5;
+  }
+  
+  .tabular-nums-style {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Glassmorphism utility helpers */
+.glass-effect {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-glass-effect {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Hide horizontal scrollbars globally and protect viewport layouts */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;  /* Firefox */
+}
